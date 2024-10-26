@@ -41,7 +41,7 @@ function createSnowflake() {
   snowflake.style.backgroundColor = randomColor;
 
   const slogans = ["琦琦中考加油", "金榜题名", "考满分", "耀眼的未来", "考试顺利", "攀登高峰", "梦想成真", "勇往直前", "努力拼搏", "合肥一中",
-  "合肥六中","合肥七中", "合肥九中", "合肥十中", "合肥六中", "合肥八中", "一六八中学", "寿春中学", "合肥三中"]; // Add your slogans here
+  "合肥六中", "合肥七中", "合肥九中", "合肥十中", "合肥八中", "一六八中学", "寿春中学", "合肥三中"]; // Add your slogans here
   snowflake.innerHTML = slogans[Math.floor(Math.random() * slogans.length)];
 
   return snowflake;
