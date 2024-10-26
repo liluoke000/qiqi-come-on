@@ -22,6 +22,9 @@ setInterval(updateCountdown, 1000);
 // 设置考中几率为100%
 document.getElementById("calculate-btn").addEventListener("click", function() {
   var collegeInput = document.getElementById("college-input").value;
+  if (collegeInput === "") {
+      collegeInput = "合肥一中";
+  }
   var resultElement = document.createElement("div");
   resultElement.textContent = "琦琦考入 " + collegeInput + " 的几率为 100%！";
   resultElement.style.color = 'red';
