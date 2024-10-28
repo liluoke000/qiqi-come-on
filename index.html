@@ -27,11 +27,19 @@
 <!-- 下雪背景效果 -->
 <div id="snow-container"></div>
 
+<!--用户点击页面后自动播放音乐-->
 <!-- 背景音乐 -->
-<audio autoplay loop>
+<audio id="background-music" loop>
     <source src="温奕心-一路生花.mp3" type="audio/mpeg">
     您的浏览器不支持 audio 元素。
 </audio>
+
+<script>
+    document.addEventListener('click', function() {
+        var audio = document.getElementById('background-music');
+        audio.play();
+    });
+</script>
 
 <script src="script.js"></script>
 </body>
