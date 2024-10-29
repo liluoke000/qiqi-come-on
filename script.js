@@ -1,14 +1,13 @@
 // 更新倒计时时钟
 function updateCountdown() {
   var now = new Date(); // 获取当前时间
-  var targetDate = new Date("2024-6-14 9:00"); // 设置目标时间（2024年6月14日9:00）
-//  var timeDiff = targetDate.getTime() - now.getTime(); // 计算时间差（毫秒）
-  var timeDiff = now.getTime() - targetDate.getTime(); // 计算时间差（毫秒）
-
-  var days = 365 - Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // 计算剩余天数
-  var hours = 24 - Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 计算剩余小时数
-  var minutes = 60 - Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // 计算剩余分钟数
-  var seconds = 60 - Math.floor((timeDiff % (1000 * 60)) / 1000); // 计算剩余秒数
+  var targetDate = new Date("2025-6-14 9:00"); // 设置目标时间（2024年6月14日9:00）
+  var timeDiff = targetDate.getTime() - now.getTime(); // 计算时间差（毫秒）
+  console.log(timeDiff);
+  var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // 计算剩余天数
+  var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 计算剩余小时数
+  var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // 计算剩余分钟数
+  var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000); // 计算剩余秒数
 
   var countdownLabelElement = document.getElementById("countdown-label"); // 获取倒计时标签元素
   countdownLabelElement.textContent = "距离中考还剩"; // 更新标签文本
