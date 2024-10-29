@@ -5,10 +5,10 @@ function updateCountdown() {
 //  var timeDiff = targetDate.getTime() - now.getTime(); // 计算时间差（毫秒）
   var timeDiff = now.getTime() - targetDate.getTime(); // 计算时间差（毫秒）
 
-  var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // 计算剩余天数
-  var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 计算剩余小时数
-  var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // 计算剩余分钟数
-  var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000); // 计算剩余秒数
+  var days = 365 - Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // 计算剩余天数
+  var hours = 24 - Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 计算剩余小时数
+  var minutes = 60 - Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // 计算剩余分钟数
+  var seconds = 60 - Math.floor((timeDiff % (1000 * 60)) / 1000); // 计算剩余秒数
 
   var countdownLabelElement = document.getElementById("countdown-label"); // 获取倒计时标签元素
   countdownLabelElement.textContent = "距离中考还剩"; // 更新标签文本
