@@ -49,7 +49,7 @@ function createSnowflake() {
     "合肥一中", "合肥一中",
     "合肥六中", "合肥六中",
     "合肥八中", "合肥八中",
-    "一六八中学", "一六八中学"]; // Add your slogans here
+    "一六八中学", "一六八中学"];
   snowflake.innerHTML = slogans[Math.floor(Math.random() * slogans.length)];
 
   return snowflake;
@@ -67,7 +67,7 @@ function getRandomColor() {
 function snowfall() {
   const snowContainer = document.getElementById('snow-container');
   // 雪花弹幕数目
-  const numSnowflakes = 100; // Adjust the number of snowflakes here
+  const numSnowflakes = 100;
 
   for (let i = 0; i < numSnowflakes; i++) {
     const snowflake = createSnowflake();
