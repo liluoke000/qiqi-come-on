@@ -3,7 +3,6 @@ function updateCountdown() {
   var now = new Date(); // 获取当前时间
   var targetDate = new Date("2025-6-14 9:00"); // 设置目标时间（2024年6月14日9:00）
   var timeDiff = targetDate.getTime() - now.getTime(); // 计算时间差（毫秒）
-  console.log(timeDiff);
   var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // 计算剩余天数
   var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 计算剩余小时数
   var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // 计算剩余分钟数
